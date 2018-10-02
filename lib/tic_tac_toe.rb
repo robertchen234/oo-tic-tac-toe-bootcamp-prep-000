@@ -96,4 +96,17 @@ def over?(board)
     return true
   end
 end
+
+def winner(board)
+  winning_token = won?(board)
+ if winning_token == false
+ return nil
+ elsif board[winning_token[0]] == "X"
+   return "X"
+ elsif board[winning_token[0]] == "O"
+   return "O"
+end
+end
+
+
 end
