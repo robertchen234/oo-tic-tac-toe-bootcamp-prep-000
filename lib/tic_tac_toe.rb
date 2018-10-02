@@ -28,6 +28,10 @@ class TicTacToe
   def move(@board, character = "X")
     board[index] = character
   end
+  
+  def position_taken?(@board, index)
+  !(@board[index].nil? || @board[index] == " ")
+end
 
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
